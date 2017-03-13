@@ -6,7 +6,7 @@ from PIL import Image, ImageDraw
 
 print "Processing..."
 
-dom = xml.dom.minidom.parse('mapFile')
+dom = xml.dom.minidom.parse('map.osm')
 
 root = dom.documentElement
 print "Reading bounds..."
@@ -94,6 +94,6 @@ del draw
 
 trans=blank.transpose(Image.FLIP_TOP_BOTTOM)
 
-trans.save("buildingTexture.png")
+trans.save("urbanTexture.png")
 
 print "Finished!!"
